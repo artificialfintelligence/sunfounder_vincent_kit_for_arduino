@@ -9,4 +9,8 @@ void loop() {
     analogWrite(ledPin, value);
     delay(30);
   }
+  for (int value = 255 ; value >= 0; value -= 5) {
+    analogWrite(ledPin, value);
+    delay(30);
+  }
 }
