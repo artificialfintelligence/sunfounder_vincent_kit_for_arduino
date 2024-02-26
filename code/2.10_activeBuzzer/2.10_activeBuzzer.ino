@@ -7,6 +7,6 @@ void setup() {
 void loop() {
   digitalWrite(buzzerPin, HIGH);
   delay(300);
-  digitalWrite(buzzerPin,LOW);
+  digitalWrite(buzzerPin, LOW);
   delay(300);
 }

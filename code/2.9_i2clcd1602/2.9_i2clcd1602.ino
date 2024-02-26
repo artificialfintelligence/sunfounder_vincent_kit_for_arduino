@@ -12,6 +12,9 @@ void setup()
 
 void loop()
 {
+  lcd.setCursor(0, 1);
+  lcd.print("Counter: ");
+  lcd.print(millis() / 1000);
   // when characters arrive over the serial port...
   if (Serial.available()) {
     // wait a bit for the entire message to arrive
@@ -21,10 +24,10 @@ void loop()
     // read all the available characters
     while (Serial.available() > 0) {
       char incomingByte=Serial.read();
-    // skip the line-feed character
+      // skip the line-feed character
       if(incomingByte==10){break;}
       // display each character to the LCD    
       lcd.print(incomingByte);
-    }
+    } 
   }
 }
